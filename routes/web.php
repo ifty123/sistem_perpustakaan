@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//role admin
 Route::get('/dashboard', [UserController::class, 'index']);
+Route::get('/detail-buku', [BookController::class, 'index']);
